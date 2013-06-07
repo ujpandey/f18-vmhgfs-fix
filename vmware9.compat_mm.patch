@@ -1,5 +1,5 @@
---- ./compat_mm.h       2013-03-04 01:36:39.184925478 -0800
-+++ ./compat_mm.h       2013-03-04 01:40:37.793728289 -0800
+--- ./compat_mm.h 2013-03-04 01:36:39.184925478 -0800
++++ ./compat_mm.h	2013-03-04 01:40:37.793728289 -0800
 @@ -91,8 +91,9 @@
  
  /*
@@ -16,4 +16,15 @@
  })
  #else
 -#define compat_vmtruncate(inode, size) vmtruncate(inode, size)
-+#define compat_vmtruncate(inode, size)
++#define compat_vmtruncate(inode, size)                                        \
++({                                                                            \
++   result = inode_newsize_ok(inode, size);                                    \
++   if (!result)                                                               \
++   {                                                                          \
++      truncate_setsize(inode, size);                                          \
++   }                                                                          \
++   result;                                                                    \
++})
++
+ #endif
+
