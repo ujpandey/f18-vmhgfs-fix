@@ -35,7 +35,7 @@ Open a terminal and enter the following commands:
     $ su -c './vmware-install.pl --clobber-kernel-modules=vmci'
     
 ## Installing with the script
-You can either download all the files provided in this repo into your vmware-tools-distrib directory and then run the patch script as root or you can just download the script into your vmware-tools-distrib directory and run it as root. It will download the other files provided you have an internet connection.
+You can either download all the files provided in this repo into your vmware-tools-distrib directory and then run the patch script as root or you can just download the script into your vmware-tools-distrib directory and run it as root. It will download the other files provided you have an internet connection. This script installs vmware tools with all the default options. To change that behavior, open the script and remove `echo | ` from the last line, then save and run.
 
     $ cd /.../vmware-tools-distrib (replace ... with the proper path to the directory where you extracted VMware Tools)
     $ wget -d https://raw.github.com/ujpandey/patch_vmware_tools_Fedora_18/master/patch.sh
