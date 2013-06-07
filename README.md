@@ -2,6 +2,7 @@ patch_vmware_tools_Fedora_18
 ============================
 
 The current release of VMware Tools has some issues which makes vmhgfs not work with the newest Linux Kernels.
+
 Look at [Erik Bryan'ts Blog](http://erikbryantology.blogspot.com/2013/03/patching-vmware-tools-in-fedora-18.html) and [Fedora forums](http://www.forums.fedoraforum.org/showthread.php?t=291199) for more information.
 Currently, it seems that only issue #3 on the blog is relevant.
 
@@ -12,9 +13,13 @@ You need to choose to either install or reinstall VMware Tools then extract the 
 
 ## Installing Manually
 Follow the instructions for issue #3 at [Erik Bryan'ts Blog](http://erikbryantology.blogspot.com/2013/03/patching-vmware-tools-in-fedora-18.html)
+
 Download the patch provided at [Fedora forums](http://www.forums.fedoraforum.org/showthread.php?t=291199), open it in a text editor and change `inode.c` to `./inode.c` in the first two lines and save. Then install the patch.
+
 Install vmware tools by running vmware-install.pl. Clobber the vmci module provided by the kernel.
+
 You can also download the copies for the patches I made in this repo. I also created a script to install the other patch.
+
 ### Command Line commands
 Open a terminal and enter the following commands:
 
