@@ -4,10 +4,25 @@
 
 import os, subprocess
 
-if [ ! -f vmware9.compat_mm.patch ] && wget -d https://raw.github.com/ujpandey/patch_vmware_tools_Fedora_18/master/vmware9.compat_mm.patch
-if [ ! -f vmware_hgfs_fix.sh ] && wget -d https://raw.github.com/ujpandey/patch_vmware_tools_Fedora_18/master/vmware_hgfs_fix.sh
-if [ ! -f patch_inode.c.patch ] && wget -d https://raw.github.com/ujpandey/patch_vmware_tools_Fedora_18/master/patch_inode.c.patch
-if [ ! -f patch_inode.c.sh ] && wget -d https://raw.github.com/ujpandey/patch_vmware_tools_Fedora_18/master/patch_inode.c.sh
+if [[ ! -f vmware9.compat_mm.patch ]]
+then
+  wget -d https://raw.github.com/ujpandey/patch_vmware_tools_Fedora_18/master/vmware9.compat_mm.patch
+fi
+
+if [[ ! -f vmware_hgfs_fix.sh ]]
+then
+  wget -d https://raw.github.com/ujpandey/patch_vmware_tools_Fedora_18/master/vmware_hgfs_fix.sh
+fi
+
+if [[ ! -f patch_inode.c.patch ]]
+then
+  wget -d https://raw.github.com/ujpandey/patch_vmware_tools_Fedora_18/master/patch_inode.c.patch
+fi
+
+if [[ ! -f patch_inode.c.sh ]]
+then
+  wget -d https://raw.github.com/ujpandey/patch_vmware_tools_Fedora_18/master/patch_inode.c.sh
+fi
 
 chmod +x vmware_hgfs_fix.sh
 chmod +x patch_inode.c.sh
