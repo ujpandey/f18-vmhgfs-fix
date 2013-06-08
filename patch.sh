@@ -14,3 +14,4 @@ chmod +x patch_inode.c.sh
 ./vmware_hgfs_fix.sh
 ./patch_inode.c.sh
 echo | ./vmware-install.pl --clobber-kernel-modules=vmci
+
