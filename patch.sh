@@ -2,8 +2,6 @@
 
 # This script patches vmware tools for Fedora 18 to fix vmhgfs
 
-import os, subprocess
-
 if [[ ! -f vmware9.compat_mm.patch ]]
 then
   wget -d https://raw.github.com/ujpandey/patch_vmware_tools_Fedora_18/master/vmware9.compat_mm.patch
