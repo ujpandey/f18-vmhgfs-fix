@@ -1,4 +1,4 @@
-patch_vmware_tools_Fedora_18
+Fedora 18 vmhgfs fix
 ============================
 
 The current release of VMware Tools has some issues which makes vmhgfs not work with the newest Linux Kernels.
