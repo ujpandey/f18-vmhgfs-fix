@@ -12,7 +12,7 @@ You can install the patches provided in the pages linked above yourself or you c
 You need to choose to either install or reinstall VMware Tools then extract the VMwareTools-9.2.3-1031360.tar.gz package from the mounted CD onto a location inside your VM first.
 
 ## Installing Manually
-Follow the instructions for issue #3 at [Erik Bryan'ts Blog](http://erikbryantology.blogspot.com/2013/03/patching-vmware-tools-in-fedora-18.html)
+Follow the instructions for issue #3 at [Erik Bryant's Blog](http://erikbryantology.blogspot.com/2013/03/patching-vmware-tools-in-fedora-18.html)
 
 Download the patch provided at [Fedora forums](http://www.forums.fedoraforum.org/showthread.php?t=291199), open it in a text editor and change `inode.c` to `./inode.c` in the first two lines and save. Then install the patch.
 
