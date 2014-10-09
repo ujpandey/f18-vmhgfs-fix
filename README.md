@@ -26,8 +26,8 @@ Open a terminal and enter the following commands:
     $ cd /.../vmware-tools-distrib (replace ... with the proper path to the directory where you extracted VMware Tools)
     $ wget -d https://raw.github.com/ebdevrepo/bin/master/vmware9.compat_mm.patch
     $ wget -d https://raw.github.com/ebdevrepo/bin/master/vmware_hgfs_fix.sh
-    $ wget -d https://raw.github.com/ujpandey/patch_vmware_tools_Fedora_18/master/patch_inode.c.patch
-    $ wget -d https://raw.github.com/ujpandey/patch_vmware_tools_Fedora_18/master/patch_inode.c.sh
+    $ wget -d https://raw.github.com/ujpandey/f18-vmhgfs-fix/master/patch_inode.c.patch
+    $ wget -d https://raw.github.com/ujpandey/f18-vmhgfs-fix/master/patch_inode.c.sh
     $ chmod +x vmware_hgfs_fix.sh
     $ chmod +x patch_inode.c.sh
     $ ./vmware_hgfs_fix.sh
@@ -40,6 +40,6 @@ You can either download all the files provided in this repo into your vmware-too
 This script installs VMware Tools with all the default options. To change that behavior, open the script and remove `echo | ` from the last line, then save and run.
 
     $ cd /.../vmware-tools-distrib (replace ... with the proper path to the directory where you extracted VMware Tools)
-    $ wget -d https://raw.github.com/ujpandey/patch_vmware_tools_Fedora_18/master/patch.sh
+    $ wget -d https://raw.github.com/ujpandey/f18-vmhgfs-fix/master/patch.sh
     $ chmod +x patch.sh
     $ su -c './patch.sh'
